@@ -1,0 +1,105 @@
+Testing in Go
+=============
+
+## The Minimum Standard
+
+*80%* Coverage (preferably 100% happy path)
+
+## TLDR
+
+1. `testing` package is your friend.
+2. `https://github.com/stretchr/testify` assertions and requirements are more than welcome.
+3. table driven tests are often worthwhile. 
+4. tests will dictate how the production code is structured.
+5. the minimum standard of coverage will be upheld.
+
+## Unit Testing
+
+Most practical ideas have been stolen from Mitchell Hashimoto's very comprehensive talk on advanced testing in Go [video](1).
+
+### Tests must be written before code reaches master
+
+Because tests can't be written later down the line. The way in which tests are written dictates the way in which the go we are testing is written.
+
+Any code that doesn't have suitable testing is subject to being thrown away and written from scratch with tests. In fact it is urged that is done as soon as possible.
+
+### Use the standard libraries
+
+The `testing` package is your friend. It comes equipped with nearly everything you need to raise failures, create sub tests and perform suite setup and tear down.
+
+### We like testify
+
+Simple comparisons are good enough to test with. However, it can get tedious and inconsistent to write our own failure messages. `assert` and `require` reduce the noise in a test and provide nicely formatted default failure messages. Plus it works very well with the standard libraries.
+
+### Table driven tests
+
+1. Use subtests to give each case of the table its own context
+2. Use name field in your table case to be more descriptive
+3. Use comments in the struct definition to further allaborate a fields intent
+
+#### examples
+
+1. Simple fibonacci
+
+code to be tested
+
+```go
+package fib
+
+// Fib returns the nth number in the Fibonacci series.
+func Fib(n int) int {
+	if n < 2 {
+		return n
+	}
+	return Fib(n-1) + Fib(n-2)
+}
+```
+
+table test for that code
+
+```go
+package fib
+
+import (
+	"fmt"
+	"testing"
+)
+
+type testCase struct {
+	in       int // input
+	expected int // expected result
+}
+
+func newCase(in, expected int) testCase { return testCase{in, expected} }
+
+func (c testCase) Name() string {
+	return fmt.Sprintf("Fib(%d) should equal %d", c.in, c.expected)
+}
+
+func (c testCase) Run(t *testing.T) {
+	actual := Fib(c.in)
+	if actual != c.expected {
+		t.Errorf("Fib(%d): expected %d, actual %d", c.in, c.expected, actual)
+	}
+}
+
+func TestFib(t *testing.T) {
+	for _, testCase := range []testCase{
+		newCase(1, 1),
+		newCase(2, 1),
+		newCase(3, 2),
+		newCase(4, 3),
+		newCase(5, 5),
+		newCase(6, 8),
+		newCase(7, 13),
+	} {
+		t.Run(testCase.Name(), testCase.Run)
+	}
+}
+```
+
+## Acceptance Testing
+
+> TODO: Here we will reach out in to existing Go projects and fill out this section with what others are doing well.
+
+[1]:[https://www.youtube.com/watch?v=yszygk1cpEc]
