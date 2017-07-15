@@ -10,6 +10,7 @@ This document is built upon and inspired by a number of articles and talks given
 ## Contents
 
 - [testing](./testing)
+- [concurrency](./concurrency)
 
 ## Resources
 
