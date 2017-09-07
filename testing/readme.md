@@ -56,7 +56,7 @@ type ContainerStopper interface {
 }
 ```
 
-Instead of turning to a mocking library, all sorts of hand-rolled tricks can be employed to swap this behavior out. Two of my favourites are defined in the snippets below.
+Instead of turning to a mocking library, all sorts of hand-rolled tricks can be employed to swap this behavior out.
 
 ```go
 type spyContainerStopper struct {
@@ -74,9 +74,9 @@ type containerStopperFunc func(string) error
 func (c containerStopperFunc) func(s string) error { return c(s) }
 ```
 
-The first is the simple spy-like implementation which captures the input `id` on calls to `Stop(...)` and returns the error configured on the struct in the `err` field.
+The first example above is the simple spy-like implementation which captures the input `id` on calls to `Stop(...)`. It also returns the error configured on the struct in the `err` field.
 
-The second allows for simple anonymous functions to be used in a test case as an implementation. Note that this is often only useful for smaller interfaces (but your interfaces should be small anyway). The following demonstrates an anonymous function which achieves the same ends as the struct implementation.
+The second allows for simple anonymous functions to be used in a test case as an implementation. Note that this is often only useful for smaller interfaces, often single function (but your interfaces should be small anyway). The following demonstrates an anonymous function which achieves the same ends as the struct implementation.
 
 ```go
 func TestSomething(t *testing.T) {
