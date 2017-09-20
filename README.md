@@ -11,7 +11,7 @@ This document is built upon and inspired by a number of articles and talks given
 
 - [testing](./testing)
 - [concurrency](./concurrency)
-- [dependency management](./deps)
+- [dependency management](./dependencies)
 
 ## Resources
 
