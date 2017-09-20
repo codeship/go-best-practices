@@ -1,4 +1,4 @@
-Codeship Golang Best Practice 
+Codeship Golang Best Practices
 =============================
 
 ## Motivation
