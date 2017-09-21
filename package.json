@@ -4,7 +4,7 @@
   "description": "Codeship Go best practices documents the standards we hold ourselves to, when delivering Golang projects.",
   "main": "index.js",
   "scripts": {
-    "test": "mdspell -rn **/*.md"
+    "test": "mdspell -rn '{,!(node_modules)/**/}*.md'"
   },
   "repository": {
     "type": "git",
