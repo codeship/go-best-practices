@@ -1,4 +1,4 @@
-Codeship Golang Best Practice 
+Codeship Golang Best Practices
 =============================
 
 ## Motivation
@@ -11,6 +11,7 @@ This document is built upon and inspired by a number of articles and talks given
 
 - [testing](./testing)
 - [concurrency](./concurrency)
+- [makefiles](./makefiles)
 - [dependency management](./dependencies)
 
 ## Resources

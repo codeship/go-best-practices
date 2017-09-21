@@ -8,11 +8,11 @@ Testing in Go
 ## TLDR
 
 1. `testing` package is your friend.
-2. `https://github.com/stretchr/testify` assertions and requirements are more than welcome.
-3. table driven tests are often worthwhile. 
-4. tests will dictate how the production code is structured.
-5. the minimum standard of coverage will be upheld.
-6. we have decided against the use of mocking libraries
+1. `https://github.com/stretchr/testify` assertions and requirements are more than welcome.
+1. table driven tests are often worthwhile.
+1. tests will dictate how the production code is structured.
+1. the minimum standard of coverage will be upheld.
+1. we have decided against the use of mocking libraries
 
 ## Unit Testing
 
@@ -35,8 +35,8 @@ Simple comparisons are good enough to test with. However, it can get tedious and
 ### Table driven tests
 
 1. Use subtests to give each case of the table its own context
-2. Use name field in your table case to be more descriptive
-3. Use comments in the struct definition to further elaborate a fields intent
+1. Use name field in your table case to be more descriptive
+1. Use comments in the struct definition to further elaborate a fields intent
 
 #### examples
 
@@ -87,7 +87,7 @@ func TestSomething(t *testing.T) {
             return errors.New("something went wrong")
         })
     )
-    
+
     //...
 }
 ```
