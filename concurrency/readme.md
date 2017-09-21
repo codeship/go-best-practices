@@ -12,7 +12,7 @@ Concurrency in Go
 ## Concurrency in Go is simple
 
 Doing it correctly is really really hard. It is easy to introduce race conditions, loose control of resources or bring things to a complete standstill.
-As often as possible we will try to avoid using it. Infact it is often better to first right something synchronously. Then in the future, extend the functionality with protection against concurrent access, then let the consumer of the type use it concurrently.
+As often as possible we will try to avoid using it. In fact it is often better to first right something synchronously. Then in the future, extend the functionality with protection against concurrent access, then let the consumer of the type use it concurrently.
 
 When we do use concurrency, what we really want to avoid is leaking the control of concurrent components between types.
 
