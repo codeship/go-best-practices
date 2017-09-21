@@ -1,5 +1,5 @@
 {
-  "name": "go-best-practice",
+  "name": "go-best-practices",
   "version": "0.1.0",
   "description": "Codeship Go best practices documents the standards we hold ourselves to, when delivering Golang projects.",
   "main": "index.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/codeship/go-best-practice.git"
+    "url": "git+https://github.com/codeship/go-best-practices.git"
   },
   "keywords": [
     "go-best-practices",
@@ -19,9 +19,9 @@
   "author": "George MacRorie",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/codeship/go-best-practice/issues"
+    "url": "https://github.com/codeship/go-best-practices/issues"
   },
-  "homepage": "https://github.com/codeship/go-best-practice#readme",
+  "homepage": "https://github.com/codeship/go-best-practices#readme",
   "dependencies": {
     "markdown-spellcheck": "^1.0.0"
   }
