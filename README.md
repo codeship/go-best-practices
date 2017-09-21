@@ -12,9 +12,20 @@ This document is built upon and inspired by a number of articles and talks given
 - [testing](./testing)
 - [concurrency](./concurrency)
 - [makefiles](./makefiles)
+- [dependency management](./dependencies)
 
 ## Resources
 
 ### Articles
 
 ### Talks
+
+## Extra Goodies
+
+We run markdown-spellcheck in CI on all contributions. Failure to amend such errors will result in changes being rejected.
+
+run `npm test` to get quick validation
+
+run `npm run-script fix` to use `mdspell` interactive correction functionality and to maintain the `.spelling` file.
+
+see output and see [mdspell](https://github.com/lukeapage/node-markdown-spellcheck) for details on how to maintain the `.spelling` file.
