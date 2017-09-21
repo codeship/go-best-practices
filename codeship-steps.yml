@@ -1,0 +1,2 @@
+- service: spellcheck
+  command: npm test
