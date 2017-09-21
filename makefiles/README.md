@@ -13,7 +13,7 @@ setup                          Install all the build and lint dependencies
 dep                            Run dep ensure and prune
 test                           Run all the tests
 cover                          Run all the tests and opens the coverage report
-fmt                            gofmt and goimports all go files
+fmt                            Run goimports on all go files
 lint                           Run all the linters
 ci                             Run all the tests and code checks
 build                          Build a version
