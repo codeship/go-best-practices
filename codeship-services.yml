@@ -1,0 +1,4 @@
+spellcheck:
+  build:
+    image: codeship/spellcheck
+    dockerfile_path: Dockerfile
