@@ -44,7 +44,7 @@ Simple comparisons are good enough to test with. However, it can get tedious and
 
 ## Mocking
 
-Currently our stance is simple. We don't use any third party libraries for mocking. Instead we favour hand-rolled mocks, dummies, noops, fakes and spies.
+Currently our stance is simple. We don't use any third party libraries for mocking. Instead we favor hand-rolled mocks, dummies, noops, fakes and spies.
 
 Let me give an example:
 
@@ -56,7 +56,7 @@ type ContainerStopper interface {
 }
 ```
 
-Instead of turning to a mocking library, all sorts of hand-rolled tricks can be employed to swap this behaviour out.
+Instead of turning to a mocking library, all sorts of hand-rolled tricks can be employed to swap this behavior out.
 
 ```go
 type spyContainerStopper struct {

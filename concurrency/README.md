@@ -21,5 +21,5 @@ What is the meaning of "leaking the control of concurrent components between typ
 This can be occur in many different forms, for example:
 
 1. Channels as either input or return arguments to an exposed function. (return arguments being the worst)
-1. Types which expose access to synchronisation types i.e. exposing a `sync.Mutex` or `sync.WaitGroup`
+1. Types which expose access to synchronization types i.e. exposing a `sync.Mutex` or `sync.WaitGroup`
 1. Types which fire off "unsupervised" goroutines
