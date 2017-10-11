@@ -29,3 +29,7 @@ run `npm test` to get quick validation
 run `npm run-script fix` to use `mdspell` interactive correction functionality and to maintain the `.spelling` file.
 
 see output and see [mdspell](https://github.com/lukeapage/node-markdown-spellcheck) for details on how to maintain the `.spelling` file.
+
+## Contributing
+
+Everyone interacting in the project and its sub-projects' codebases, issue trackers, chat rooms, and mailing lists is expected to follow the [Code of Conduct](CODE_OF_CONDUCT.md).
