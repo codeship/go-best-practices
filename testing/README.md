@@ -71,7 +71,7 @@ func (s spyContainerStopper) Stop(id string) error {
 
 type containerStopperFunc func(string) error
 
-func (c containerStopperFunc) func(s string) error { return c(s) }
+func (c containerStopperFunc) Stop(s string) error { return c(s) }
 ```
 
 The first example above is the simple spy-like implementation which captures the input `id` on calls to `Stop(...)`. It also returns the error configured on the struct in the `err` field.
