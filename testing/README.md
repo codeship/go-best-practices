@@ -68,13 +68,15 @@ func (s spyContainerStopper) Stop(id string) error {
     s.id = id
     return n.err
 }
+```
 
+The first example above is the simple spy-like implementation which captures the input `id` on calls to `Stop(...)`. It also returns the error configured on the struct in the `err` field.
+
+```go
 type containerStopperFunc func(string) error
 
 func (c containerStopperFunc) Stop(s string) error { return c(s) }
 ```
-
-The first example above is the simple spy-like implementation which captures the input `id` on calls to `Stop(...)`. It also returns the error configured on the struct in the `err` field.
 
 The second allows for simple anonymous functions to be used in a test case as an implementation. Note that this is often only useful for smaller interfaces, often single function (but your interfaces should be small anyway). The following demonstrates an anonymous function which achieves the same ends as the struct implementation.
 
@@ -96,6 +98,6 @@ If you are dealing with a big pesky interface, it is recommended that you use so
 
 ## Acceptance Testing
 
-> TODO: Here we will reach out in to existing Go projects and fill out this section with what others are doing well.
+> TODO: Here we will reach out to existing Go projects and fill out this section with what others are doing well.
 
 [1]:[https://www.youtube.com/watch?v=yszygk1cpEc]
