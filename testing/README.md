@@ -46,7 +46,7 @@ Simple comparisons are good enough to test with. However, it can get tedious and
 
 Currently our stance is simple. We don't use any third party libraries for mocking. Instead we favor hand-rolled mocks, dummies, noops, fakes and spies.
 
-Let me give an example:
+Here's an example:
 
 Say that we have an interface which when supplied with a "container ID", it is intended to stop that container from running. The interface for this functionality might look like this:
 
