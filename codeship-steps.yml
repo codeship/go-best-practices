@@ -1,2 +1,2 @@
 - service: spellcheck
-  command: npm test
+  command: make spellcheck 

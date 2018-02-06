@@ -1,7 +1,7 @@
 .PHONY: spellcheck
 spellcheck:
-	npm test
+	yarn test
 
 .PHONY: fix-spelling
 fix-spelling:
-	npm run fix
+	yarn run fix
