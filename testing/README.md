@@ -100,4 +100,4 @@ If you are dealing with a big pesky interface, it is recommended that you use so
 
 > TODO: Here we will reach out to existing Go projects and fill out this section with what others are doing well.
 
-[1]:[https://www.youtube.com/watch?v=yszygk1cpEc]
+[1]: https://www.youtube.com/watch?v=yszygk1cpEc
