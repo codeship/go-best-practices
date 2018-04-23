@@ -16,7 +16,7 @@ Testing in Go
 
 ## Unit Testing
 
-Most practical ideas have been stolen from Mitchell Hashimoto's very comprehensive talk on advanced testing in Go [video](1).
+Most practical ideas have been stolen from Mitchell Hashimoto's very comprehensive talk on advanced testing in Go [video][1].
 
 ### Tests must be written before code reaches master
 
@@ -100,4 +100,4 @@ If you are dealing with a big pesky interface, it is recommended that you use so
 
 > TODO: Here we will reach out to existing Go projects and fill out this section with what others are doing well.
 
-[1]:[https://www.youtube.com/watch?v=yszygk1cpEc]
+[1]: https://www.youtube.com/watch?v=yszygk1cpEc

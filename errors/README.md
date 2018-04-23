@@ -34,4 +34,4 @@ return errors.New("always in lower-case")
 
 ## Third Party Tools
 
-- [pkg/errors](github.com/pkg/errors) - Dave Cheney's error handling primitives package
+- [pkg/errors](https://github.com/pkg/errors) - Dave Cheney's error handling primitives package
