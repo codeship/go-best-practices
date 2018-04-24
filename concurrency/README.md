@@ -47,8 +47,8 @@ The simplest way to achieve this is with a `sync.WaitGroup`.
 
 Goroutine type in this scenario relates to the type of the function being called as a goroutine.
 This function could be a member of another type, be a named function in the package or it could be anonymous.
-The important take-away is that you shouldn't share the waitgroup amoungst different functions called as goroutines.
-Keep it simple and add another waitgroup if you find yourself calling `go` before a different function and name the waitgroups appropriately.
+The important take-away is that you shouldn't share the WaitGroup among different functions called as goroutines.
+Keep it simple and add another WaitGroup if you find yourself calling `go` before a different function and name the WaitGroup's appropriately.
 
 ```go
 type Parent struct {
@@ -73,7 +73,7 @@ func (p *Parent) Go() {
 }
 ```
 
-Though sharing a waitgroup may be a correct solution, it adds to the cognitive complexity of a problem when the next engineer comes to grok it.
+Though sharing a WaitGroup may be a correct solution, it adds to the cognitive complexity of a problem when the next engineer comes to grok it.
 
 ### **Don't** let a channel consumer say when it is done
 
